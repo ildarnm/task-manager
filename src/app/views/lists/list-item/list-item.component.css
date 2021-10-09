@@ -1,0 +1,28 @@
+:host {
+  display: flex;
+  border-top: 1px solid #eee;
+}
+:host:hover {
+  background-color: #f8f8f8;
+}
+:host.active {
+  background-color: black;
+  color: white;
+}
+:host:hover .list-remove {
+  display: block;
+  background: transparent;
+  color: white;
+  border: none;
+}
+
+.list-title {
+  padding: 10px;
+  flex:1;
+}
+
+.list-remove {
+  display: none;
+  color: black;
+  width: 30px;
+}

@@ -1,0 +1,4 @@
+<ng-container *mobxAutorun="{ name: 'autorun list-item' }">
+  <span class="list-title">{{list.title}}<span *ngIf="activeTasksCount > 0"> ({{activeTasksCount}})</span></span>
+  <button class="list-remove" (click)="removeList()">x</button>
+</ng-container>

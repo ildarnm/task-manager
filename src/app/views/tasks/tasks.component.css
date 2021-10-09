@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+}
+.header input {
+  width: 100%;
+}
+
+.empty-list {
+  padding: 10px 10px;
+}

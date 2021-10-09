@@ -1,0 +1,27 @@
+:host {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #eee;
+}
+:host:hover {
+  background-color: #f8f8f8;
+}
+:host.active {
+  background-color: red;
+}
+.task-title {
+  padding: 10px;
+  flex: 1;
+}
+.task-remove {
+  display: none;
+  border: none;
+  background: transparent;
+  width: 30px;
+}
+:host:hover .task-remove {
+  display: block;
+}
+.task-selected {
+  text-decoration: line-through;
+}

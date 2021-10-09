@@ -1,0 +1,14 @@
+<ng-container *mobxAutorun="{ name: 'autorun lists' }">
+  <it-list-item
+    *ngFor="let list of lists; trackBy: trackByListId"
+    [class.active]="list.id === activeListId"
+    [list]="list"
+    (click)="setActiveList(list.id)"
+    (remove)="removeList(list.id)"
+  ></it-list-item>
+  <div class="new-list">
+    <input class="list-name-input" [value]="newListTitle" (input)="setNewListTitle($event.target.value)"
+           placeholder="New list..." type="text">
+    <button type="button" (click)="addList()">Add</button>
+  </div>
+</ng-container>

@@ -1,0 +1,5 @@
+<ng-container *mobxAutorun="{ name: 'autorun task-item' }">
+  <input type="checkbox" [checked]="task.completed" (input)="setCompleted($event)">
+  <span class="task-title" [class.task-selected]="task.completed">{{task.title}}</span>
+  <button class="task-remove" (click)="removeTask()">x</button>
+</ng-container>

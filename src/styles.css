@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+body, input {
+  font-family: Verdana;
+  font-size: 14px;
+}
+
+input {
+  border: 1px solid #5a5a5a;
+  border-radius: 2px;
+  padding: 9px;
+  outline: none;
+}
+input:hover,input:focus {
+  border: 1px solid #5a5a5a;
+  border-radius: 2px;
+  padding: 9px;
+}
+
+input[type=checkbox] {
+  width: 14px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+input[type=checkbox]:after {
+  content: " ";
+  background-color: #ffffff;
+  display: inline-block;
+  visibility: visible;
+}
+
+input[type=checkbox]:checked:after {
+  content: "\2714";
+}
+
+button {
+  background-color: white;
+  border: 1px solid black;
+}

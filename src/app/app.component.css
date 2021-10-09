@@ -1,0 +1,10 @@
+:host {
+  display: flex;
+}
+.lists {
+  width: 300px;
+}
+.tasks {
+  flex: 1;
+  margin-left: 10px;
+}
