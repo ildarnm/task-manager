@@ -7,7 +7,7 @@
     (remove)="removeList(list.id)"
   ></it-list-item>
   <div class="new-list">
-    <input class="list-name-input" [value]="newListTitle" (input)="setNewListTitle($event.target.value)"
+    <input class="list-name-input" [value]="newListTitle" (input)="handleNewTaskTitleInput($event)"
            placeholder="New list..." type="text">
     <button type="button" (click)="addList()">Add</button>
   </div>

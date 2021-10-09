@@ -1,9 +1,9 @@
 <ng-container *mobxAutorun="{ name: 'autorun tasks' }">
   <ng-container *ngIf="isListSelected">
-    <div *ngIf="activeList.tasks.length === 0" class="empty-list">There is no task</div>
+    <div *ngIf="activeList?.tasks?.length === 0" class="empty-list">There is no task</div>
     <it-task-item *ngFor="let task of activeList?.tasks; trackBy: trackByTaskId" [task]="task" (remove)="removeTask($event)"></it-task-item>
     <div class="header">
-      <input [value]="newTaskTitle" (input)="setNewTaskTitle($event.target.value)" type="text"
+      <input [value]="newTaskTitle" (input)="handleNewTaskTitleInput($event)" type="text"
              placeholder="Enter new tasks">
       <button (click)="addTask()">Add</button>
     </div>

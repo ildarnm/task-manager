@@ -28,6 +28,10 @@ export class ListsComponent {
     this.newListTitle = value;
   }
 
+  handleNewTaskTitleInput({ target }: Event) {
+    this.setNewListTitle((target as HTMLInputElement).value);
+  }
+
   @HostListener('keydown.enter', ['$event'])
   @action addList() {
     if (this.newListTitle.trim().length === 0) return;
@@ -47,7 +51,7 @@ export class ListsComponent {
     this.listsStore.setActiveList(id);
   }
 
-  trackByListId(list: List): number {
+  trackByListId(index: number, list: List) {
     return list.id;
   }
 }

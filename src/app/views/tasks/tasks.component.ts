@@ -37,11 +37,15 @@ export class TasksComponent {
     this.newTaskTitle = value;
   }
 
+  handleNewTaskTitleInput({ target }: Event) {
+    this.setNewTaskTitle((target as HTMLInputElement).value)
+  }
+
   removeTask(taskId: id) {
     this.taskStore.delete(taskId);
   }
 
-  trackByTaskId(task: Task): number {
+  trackByTaskId(index: number, task: Task) {
     return task.id;
   }
 }
