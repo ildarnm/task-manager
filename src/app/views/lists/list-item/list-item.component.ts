@@ -1,7 +1,6 @@
-import {Component, EventEmitter, HostBinding, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {List} from "../../../shared/models/list";
-import {computed, makeObservable} from "mobx";
-import {ListsStore} from "../../../stores/lists.store";
+import {computed} from "mobx";
 
 @Component({
   selector: 'it-list-item',
@@ -14,9 +13,6 @@ export class ListItemComponent {
 
   @computed get activeTasksCount(): number {
     return this.list.activeTasks.length;
-  }
-
-  constructor(private listsStore: ListsStore) {
   }
 
   removeList() {

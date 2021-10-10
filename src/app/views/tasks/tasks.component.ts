@@ -14,16 +14,16 @@ import {Task} from "../../shared/models/task";
 export class TasksComponent {
   @observable newTaskTitle = '';
 
-  get activeList(): List | undefined {
+  @computed get activeList(): List | undefined {
     return this.listsStore.activeList;
   }
 
-  get isListSelected(): boolean {
+  @computed get isListSelected(): boolean {
     return this.activeList !== undefined;
   }
 
   constructor(private taskStore: TasksStore, private listsStore: ListsStore) {
-    makeObservable(this);
+    makeObservable(this); // don't forget add this if a class has an observable field
   }
 
   @HostListener('keydown.enter', ['$event'])
@@ -38,7 +38,7 @@ export class TasksComponent {
   }
 
   handleNewTaskTitleInput({ target }: Event) {
-    this.setNewTaskTitle((target as HTMLInputElement).value)
+    this.setNewTaskTitle((target as HTMLInputElement).value);
   }
 
   removeTask(taskId: id) {

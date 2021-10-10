@@ -14,8 +14,4 @@ export class TasksStore extends Collection<Task, TaskData> {
   constructor(protected modelProvider: ModelProvider) {
     super(modelProvider);
   }
-
-  getTaskByListId(id: id): Task[] {
-    return this.items.filter(i => i.listId === id);
-  }
 }

@@ -21,7 +21,7 @@ export class ListsComponent {
   }
 
   constructor(private listsStore: ListsStore) {
-    makeObservable(this); // don't forgot add this if have an observable field
+    makeObservable(this); // don't forget add this if a class has an observable field
   }
 
   @action setNewListTitle(value: string) {

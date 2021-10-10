@@ -15,7 +15,7 @@ export class ListsStore extends Collection<List, ListData> {
 
   constructor(protected modelProvider: ModelProvider) {
     super(modelProvider);
-    makeObservable(this); // don't forgot add this if have an observable field
+    makeObservable(this); // don't forget add this if a class has an observable field
   }
 
   get activeList() : List | undefined {
