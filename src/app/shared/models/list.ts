@@ -22,10 +22,7 @@ export class List extends BaseModel {
 
   constructor(private tasksStore: TasksStore) {
     super();
-    makeObservable(this, {
-      tasks: computed,
-      activeTasks: computed
-    });
+    makeObservable(this);
   }
 
   @action addTask(title: string) {
@@ -39,7 +36,7 @@ export class List extends BaseModel {
     Object.assign(this, data);
   }
 
-  @action getJSON(): ListData {
+  getJSON(): ListData {
     return {
       id: this.id,
       title: this.title

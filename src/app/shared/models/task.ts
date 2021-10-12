@@ -38,7 +38,7 @@ export class Task extends BaseModel {
     Object.assign(this, task);
   }
 
-  @action getJSON(): TaskData {
+  getJSON(): TaskData {
     return {
       id: this.id,
       title: this.title,
